@@ -34,11 +34,4 @@ app.get("/", (req, res) => {
     res, send("Welcome to First Practice Project of Nodejs");
 });
 
-app.use((err, req, res, next) => {
-    res.status(500).json({
-        success: false,
-        message: err.message,
-    });
-});
-
 export default app;
